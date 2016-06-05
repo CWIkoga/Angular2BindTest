@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<h1>My First Angular 2 App</h1>
+<p>{{title}}</p>
+<h2>片方向だよ</h2>
+<input id="oneWay"type="text" [ngModel]="nameSatou" />
+<div>こんにちわ、{{nameSatou}}さん</div>
+
+<h2>双方向だよ</h2>
+<input id="twoWay" type="text" [(ngModel)]="nameTanaka" />
+<div>こんばんわ、{{nameTanaka}}さん</div>
+
+<h2>べつの双方向だよ</h2>
+<input id="newTwoWay" type="text" [ngModel]="nameSuzuki" (ngModelChange)="nameSuzuki=$event" />
+<div>はじめまして、{{nameSuzuki}}さん</div>
